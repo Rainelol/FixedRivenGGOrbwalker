@@ -1680,9 +1680,8 @@ do
                     local riven_start = GetTickCount() + 450 + (isThree and 100 or 0) - LATENCY
                     Action:Add(function()
                         if GetTickCount() < riven_start then
-                            if Cursor.Step == 0 and Game.Timer() - lastReset > 0.09 then
+                            if Cursor.Step == 0 and Game.Timer() - lastReset > 0.03334 then
                                 lastReset = Game.Timer()
-                                print(lastReset)
                                 Movement.MoveTimer = 0
                                 Control.Move()
                             end
